@@ -6,7 +6,7 @@
 html {
   background: #222 url("images/bg.png") repeat;
 }
-
+/*
 body {
   _width: 70%;
   color: #888;
@@ -42,7 +42,7 @@ p,h3,h4,pre {
 .rslides {
   margin: 0 auto 40px;
   }
-
+*/
 #slider2,
 #slider3 {
   box-shadow: none;

@@ -24,7 +24,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	color: #444;
+	color: #CCC;
 	font-family: Georgia, serif;
 	line-height: 1.5em;
 }
@@ -199,7 +199,7 @@ a.bttn {
 	margin: 0 0 1em;
 }
 .footer p {
-	color: #666;
+	color: #CCC;
 	/*text-align: center;*/
 	max-width: none;
 }
