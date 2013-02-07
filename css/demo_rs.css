@@ -4,7 +4,7 @@
 }
 
 html {
-  background: #222 url("images/bg.png") repeat;
+  background: #222;
 }
 /*
 body {
@@ -209,6 +209,7 @@ h3 {
 
 #slider3-pager a {
   display: inline-block;
+  border-bottom: none;
 }
 
 #slider3-pager img {

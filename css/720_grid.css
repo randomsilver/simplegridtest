@@ -31,9 +31,9 @@ body { font-size: 0.875em; padding: 0; }
 /* Row Clearfix */
 .row:after{ visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0; }
 .row{ zoom:1; }
-.menu {
+.nav {
 	text-align: right;
 }
-.menu li {
+.nav li {
 	font-size: 1em;
 }

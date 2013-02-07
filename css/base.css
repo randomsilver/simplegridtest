@@ -203,17 +203,23 @@ a.bttn {
 	/*text-align: center;*/
 	max-width: none;
 }
-.menu {
+.nav {
 	text-align: center;
 	list-style-type: none;
 }
-.menu li {
+.nav li {
 	display: inline;
 	border-left: 1px solid #CCCCCC;
 	padding-right: 10px;
 	padding-left: 15px;
 	font-size: 0.8em;
 }
-.menu li:first-child {
+.nav li:first-child {
 	border-left: none;
-};
+}
+.header .nav li a {
+	color: #CCC;
+	text-decoration: none;
+}
+.header .nav li a:hover {
+	text-decoration: underline;
