@@ -71,26 +71,6 @@
         visible = {"float": "left", "position": "relative", "opacity": 1, "zIndex": 2},
         hidden = {"float": "none", "position": "absolute", "opacity": 0, "zIndex": 1},
 
-        // Load large images
-        loadImages =  function (url, container) {
-          // get the JSON object
-            $.getJSON(url, function (data) {
-              if (typeof data === 'object') {
-                // create the HTML markup for the slider from data
-                $.each(data['images'], function (key, image) {
-                  var slide = '<li><img src="' + image['url'] + '" alt="' + image['title'] + '"></li>';
-                  $(container).append(slide);
-                });
-                  // initialize anythingSlider
-                $(container).anythingSlider();
-              }
-            });
-          };
-         
-      $(function () {
-        loadImages('/images/large/lg_photos.json', '#slider3');
-      }),
-
         // Detect transition support
       supportsTransitions = (function () {
           var docBody = document.body || document.documentElement;
@@ -200,14 +180,25 @@
 
         // Pager
         if (settings.pager && !settings.manualControls) {
-          var tabMarkup = [];
-          $slide.each(function (i) {
-            var n = i + 1;
-            tabMarkup +=
-              "<li>" +
-              "<a href='#' class='" + slideClassPrefix + n + "'>" + n + "</a>" +
-              "</li>";
+          // $(document).ready(function () {
+          $.getJSON("sm_photos.json", function (data) {
+            $.each(data.thumbs, function () {
+              // $("ul#slider3-pager").append("<li><a href='#'>" + this.src + "</li>");
+              console.log(data);
+            
+              var tabMarkup = [];
+              $slide.each(function (i) {
+                var n = i + 1;
+                tabMarkup +=
+                  "<li>" +
+                  "<a href='#' class='" + slideClassPrefix + n + "'><img class='image' src="' + this['src']"' /> + "</a>" +
+                  "</li>";
+              });
+            });
           });
+          // });
+                    
+
           $pager.append(tabMarkup);
 
           // Inject pager
@@ -400,6 +391,7 @@
 
         // Init fallback
         widthSupport();
+        loadThumbs();
         $(window).bind("resize", function () {
           widthSupport();
         });
