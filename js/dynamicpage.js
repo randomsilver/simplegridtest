@@ -1,15 +1,15 @@
 $(function() {
 
     var newHash      = "",
-        $mainContent = $("#main-content"),
-        $pageWrap    = $("#page-wrap"),
+        $mainContent = $("#mainContent"),
+        $pageWrap    = $("#pageWrap"),
         baseHeight   = 0,
         $el;
         
     $pageWrap.height($pageWrap.height());
     baseHeight = $pageWrap.height() - $mainContent.height();
     
-    $("nav").delegate("a", "click", function() {
+    $(".nav").delegate("a", "click", function() {
         window.location.hash = $(this).attr("href");
         return false;
     });
@@ -19,17 +19,17 @@ $(function() {
          // load the content
         function loadContent(href){
             $mainContent
-                .find("#guts")
+                .find("#content")
                 .fadeOut(200, function() {
-                    $mainContent.hide().load(href + " #guts", function() {
+                    $mainContent.hide().load(href + " #content", function() {
                     $mainContent.fadeIn(200, function() {
-                        $pageWrap.animate({
-                            height: baseHeight + $mainContent.height() + "px"
-                        });
+                        // $pageWrap.animate({
+                        //     height: baseHeight + $mainContent.height() + "px"
+                        // });
                     });
-                    $("nav a").removeClass("current");
+                    $(".nav a").removeClass("current");
                     console.log(href);
-                    $("nav a[href$="+href+"]").addClass("current");
+                    $(".nav a[href$="+href+"]").addClass("current");
                 });
             });
         }; 
@@ -39,8 +39,8 @@ $(function() {
         // history is supported; do magical things
 
         var newHash      = "",
-            $mainContent = $("#main-content"),
-            $pageWrap    = $("#page-wrap"),
+            $mainContent = $("#mainContent"),
+            $pageWrap    = $("#pageWrap"),
             baseHeight   = 0,
             $el;
 
@@ -49,7 +49,7 @@ $(function() {
         baseHeight = $pageWrap.height() - $mainContent.height();
 
         // hijack the nav click event
-        $("nav").delegate("a", "click", function() {
+        $(".nav").delegate("a", "click", function() {
             _link = $(this).attr("href");
             history.pushState(null, null, _link);
             loadContent(_link);
