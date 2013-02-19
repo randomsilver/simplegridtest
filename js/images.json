@@ -1,0 +1,18 @@
+[
+	{
+		"key": 1,
+		"imagePath": {
+			"small": "./images/small/1.jpg",
+			"large":  "./images/large/1.jpg"
+		},
+		"description": "Image 1"
+	},
+	{
+		"key": 2,
+		"imagePath": {
+			"small": "./images/small/2.jpg",
+			"large":  "./images/large/2.jpg"
+		},
+		"description": "Image 2"
+	}
+]

@@ -71,28 +71,8 @@
         visible = {"float": "left", "position": "relative", "opacity": 1, "zIndex": 2},
         hidden = {"float": "none", "position": "absolute", "opacity": 0, "zIndex": 1},
 
-        // Load large images
-        loadImages =  function (url, container) {
-          // get the JSON object
-            $.getJSON(url, function (data) {
-              if (typeof data === 'object') {
-                // create the HTML markup for the slider from data
-                $.each(data['images'], function (key, image) {
-                  var slide = '<li><img src="' + image['url'] + '" alt="' + image['title'] + '"></li>';
-                  $(container).append(slide);
-                });
-                  // initialize anythingSlider
-                $(container).anythingSlider();
-              }
-            });
-          };
-         
-      $(function () {
-        loadImages('/images/large/lg_photos.json', '#slider3');
-      }),
-
         // Detect transition support
-      supportsTransitions = (function () {
+        supportsTransitions = (function () {
           var docBody = document.body || document.documentElement;
           var styles = docBody.style;
           var prop = "transition";
@@ -112,7 +92,7 @@
         })(),
 
         // Fading animation
-      slideTo = function (idx) {
+        slideTo = function (idx) {
           settings.before();
           // If CSS3 transitions are supported
           if (supportsTransitions) {
