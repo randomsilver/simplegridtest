@@ -112,9 +112,6 @@ hr {
 	font-weight: normal;
 	font-size: 1.2em;
 }
-.logo b {
-	font-weight: bold;
-}
 
 .banner-wrap {
 	text-align: center;
@@ -129,6 +126,22 @@ hr {
 	font-family: sommet-slab-1, sommet-slab-2, Georgia, serif;
 	line-height: 1.1em;
 	max-width: none;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.ie6 .clearfix { 
+	height: 1%; 
+}
+
+.ie7 .clearfix { 
+	zoom: 1; 
 }
 
 .grid {
@@ -222,7 +235,28 @@ nav li a:hover {
 	text-decoration: underline;
 	color: #ff0000;
 }
-nav li a:active, nav li a.current {
+nav li a:active, nav .current {
 	color: #00ff00;
 	text-decoration: none;
+}
+
+.gallery {
+	position: relative;
+}
+.rslides li a {
+	position: relative;
+	display: block;
+}
+.rslides li a span {
+	background: #000000;
+	opacity: 0.6;
+	bottom: 0; 
+	display: block; 
+	left: 0; 
+	padding: 15px; 
+	position: absolute; 
+	right: 0;
+}
+.ie7 .rslides li a span {
+	top: auto;
 }

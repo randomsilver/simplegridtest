@@ -53,7 +53,7 @@ var VIV = {
 	},
 
 	createLargeImageHtml: function (imagePath, imageDescription) {
-		var html = '<a href="#"><img height="234" width="468" src="' + imagePath + '" alt="' + imageDescription + '" /></a>';
+		var html = '<a href="#" class="clearfix"><img height="300" width="450" src="' + imagePath + '" alt="' + '" /><span>' + imageDescription + '</span></a>';
 		return html;
 	}
 
