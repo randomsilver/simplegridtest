@@ -83,16 +83,13 @@ h5, h6 {
 	font-size: 1em;
 }
 
-a, a:link, a:visited {
+a  {
 	color: #11bad3;
 	text-decoration: none;
-	border-bottom: 1px solid #11bad3;
 }
 
-a:hover, a:active {
-	background: #00a9c2;
-	border-color: #00a9c2;
-	color: #fff;
+a:hover {
+	text-decoration: underline;
 }
 
 img {
@@ -217,9 +214,15 @@ a.bttn {
 .nav li:first-child {
 	border-left: none;
 }
-.header .nav li a {
+nav li a {
 	color: #CCC;
 	text-decoration: none;
 }
-.header .nav li a:hover {
+nav li a:hover {
 	text-decoration: underline;
+	color: #ff0000;
+}
+nav li a:active, nav li a.current {
+	color: #00ff00;
+	text-decoration: none;
+}
