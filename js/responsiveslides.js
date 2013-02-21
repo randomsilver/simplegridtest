@@ -180,25 +180,14 @@
 
         // Pager
         if (settings.pager && !settings.manualControls) {
-          // $(document).ready(function () {
-          $.getJSON("sm_photos.json", function (data) {
-            $.each(data.thumbs, function () {
-              // $("ul#slider3-pager").append("<li><a href='#'>" + this.src + "</li>");
-              console.log(data);
-            
-              var tabMarkup = [];
-              $slide.each(function (i) {
-                var n = i + 1;
-                tabMarkup +=
-                  "<li>" +
-                  "<a href='#' class='" + slideClassPrefix + n + "'><img class='image' src="' + this['src']"' /> + "</a>" +
-                  "</li>";
-              });
-            });
+          var tabMarkup = [];
+          $slide.each(function (i) {
+            var n = i + 1;
+            tabMarkup +=
+              "<li>" +
+              "<a href='#' class='" + slideClassPrefix + n + "'>" + n + "</a>" +
+              "</li>";
           });
-          // });
-                    
-
           $pager.append(tabMarkup);
 
           // Inject pager
@@ -391,7 +380,6 @@
 
         // Init fallback
         widthSupport();
-        loadThumbs();
         $(window).bind("resize", function () {
           widthSupport();
         });
