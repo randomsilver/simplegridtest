@@ -28,10 +28,3 @@ body { font-size: 100%; }
 .nav li {
 	font-size: 1em;
 }
-.nav ul li a:hover  {
-	color: #ff0000;
-}
-.nav ul li a:active, .nav ul li .current {
-	text-decoration: none;
-	color: #11BAD3;
-}
