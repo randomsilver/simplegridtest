@@ -9,7 +9,7 @@ $(function() {
     $pageWrap.height($pageWrap.height());
     baseHeight = $pageWrap.height() - $mainContent.height();
     
-    $(".nav").delegate("a", "click", function() {
+    $("nav").delegate("a", "click", function() {
         window.location.hash = $(this).attr("href");
         return false;
     });
@@ -27,9 +27,9 @@ $(function() {
                         //     height: baseHeight + $mainContent.height() + "px"
                         // });
                     });
-                    $(".nav a").removeClass("current");
+                    $("nav a").removeClass("current");
                     console.log(href);
-                    $(".nav a[href$="+href+"]").addClass("current");
+                    $("nav a[href$='"+href+"']").addClass("current");
                 });
             });
         }; 
@@ -49,7 +49,7 @@ $(function() {
         baseHeight = $pageWrap.height() - $mainContent.height();
 
         // hijack the nav click event
-        $(".nav").delegate("a", "click", function() {
+        $("nav").delegate("a", "click", function() {
             _link = $(this).attr("href");
             history.pushState(null, null, _link);
             loadContent(_link);
