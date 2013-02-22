@@ -54,7 +54,7 @@ strong {
 }
 p {
 	margin: 0 0 0.5em;
-	max-width: 634px;
+	/*max-width: 634px;*/
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: sommet-slab-1, sommet-slab-2, Georgia, serif;
