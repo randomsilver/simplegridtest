@@ -28,6 +28,13 @@ body {
 	font-family: Georgia, serif;
 	line-height: 1.5em;
 }
+.no-js .slot-0-1-2 {
+	/*width: auto;*/
+	padding-right: 20px;
+}
+.no-js .ie7 .slot-0-1-2 {
+	width: 588px;
+}
 ol, ul {
 	list-style: square;
 	margin: 0 0 0.5em;
@@ -260,3 +267,37 @@ nav li a:active, nav .current {
 .ie7 .rslides li a span {
 	top: auto;
 }
+.ie8 img {
+	max-width: auto;
+}
+
+
+/* Non-javaScript */
+.js .nojs_version, .js .gallery p {
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	text-indent: 2px;
+}
+.no-js .rslides_tab {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid #999999;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.3), 0 0 5px #000000 inset;
+    font-size: 18px;
+    list-style: none outside none;
+    margin: 0 auto 50px;
+    max-width: 540px;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+.no-js .rslides_tabs a {
+	padding-right: 0;
+	padding-left: 0;
+}
+.no-js .rslides_tabs li {
+	margin-right: 0;
+} 

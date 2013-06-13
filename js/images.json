@@ -14,5 +14,53 @@
 			"large":  "./images/large/2.jpg"
 		},
 		"description": "Image 2"
+	},
+	{
+		"key": 3,
+		"imagePath": {
+			"small": "./images/small/3.jpg",
+			"large":  "./images/large/3.jpg"
+		},
+		"description": "Image 3"
+	},
+	{
+		"key": 4,
+		"imagePath": {
+			"small": "./images/small/4.jpg",
+			"large":  "./images/large/4.jpg"
+		},
+		"description": "Image 4"
+	},
+	{
+		"key": 5,
+		"imagePath": {
+			"small": "./images/small/5.jpg",
+			"large":  "./images/large/5.jpg"
+		},
+		"description": "Image 5"
+	},
+	{
+		"key": 6,
+		"imagePath": {
+			"small": "./images/small/6.jpg",
+			"large":  "./images/large/6.jpg"
+		},
+		"description": "Image 6"
+	},
+	{
+		"key": 7,
+		"imagePath": {
+			"small": "./images/small/7.jpg",
+			"large":  "./images/large/7.jpg"
+		},
+		"description": "Image 7"
+	},
+	{
+		"key": 8,
+		"imagePath": {
+			"small": "./images/small/8.jpg",
+			"large":  "./images/large/8.jpg"
+		},
+		"description": "Image 8"
 	}
 ]

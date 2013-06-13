@@ -1,0 +1,254 @@
+/* line 23, base2.scss */
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 31, base2.scss */
+ol, ul {
+  list-style: square;
+  margin: 0 0 0.5em;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 38, base2.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 41, base2.scss */
+body {
+  color: #CCC;
+  font-family: Georgia, serif;
+  line-height: 1.5;
+  margin: 0;
+  background-color: #666;
+}
+
+/* line 50, base2.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 54, base2.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 58, base2.scss */
+code {
+  background-color: #f4f4f4;
+  font-family: Menlo, 'Panic Sans', monospace;
+  font-size: 0.875em;
+}
+
+/* line 63, base2.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 67, base2.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 70, base2.scss */
+p {
+  margin: 0 0 0.5em;
+  /*max-width: 634px;*/
+}
+
+/* grid styles */
+/* line 77, base2.scss */
+.grid:after,
+.header:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 83, base2.scss */
+.grid .pageWrap,
+.grid .header {
+  margin: 0 auto;
+  width: 1206px;
+}
+/* line 88, base2.scss */
+.grid .pageWrap .section,
+.grid .pageWrap .header,
+.grid .header .section,
+.grid .header .header {
+  margin-bottom: 20px;
+}
+/* line 93, base2.scss */
+.grid .pageWrap .section .grid-pad,
+.grid .header .section .grid-pad {
+  padding-left: 20px;
+}
+/* line 98, base2.scss */
+.grid .pageWrap .header,
+.grid .header .header {
+  overflow: hidden;
+}
+/* line 102, base2.scss */
+.grid .pageWrap .nav,
+.grid .header .nav {
+  text-align: right;
+  list-style-type: none;
+}
+/* line 106, base2.scss */
+.grid .pageWrap .nav li,
+.grid .header .nav li {
+  display: inline;
+  border-left: 1px solid #CCCCCC;
+  padding-right: 10px;
+  padding-left: 15px;
+  font-size: 0.8em;
+}
+/* line 113, base2.scss */
+.grid .pageWrap .nav li a,
+.grid .header .nav li a {
+  color: #CCC;
+  text-decoration: none;
+}
+/* line 117, base2.scss */
+.grid .pageWrap .nav li a:hover,
+.grid .header .nav li a:hover {
+  text-decoration: underline;
+  color: #ff0000;
+}
+/* line 121, base2.scss */
+.grid .pageWrap .nav li a:active,
+.grid .header .nav li a:active {
+  color: #00ff00;
+  text-decoration: none;
+}
+/* line 127, base2.scss */
+.grid .pageWrap .nav li .current,
+.grid .header .nav li .current {
+  color: #00ff00;
+  text-decoration: none;
+}
+/* line 133, base2.scss */
+.grid .pageWrap .nav:first-child,
+.grid .header .nav:first-child {
+  border-left: none;
+}
+/* line 138, base2.scss */
+.grid .pageWrap .col-1-2,
+.grid .header .col-1-2 {
+  width: 50%;
+  float: left;
+}
+/* line 142, base2.scss */
+.grid .pageWrap .col-1-2:first-child,
+.grid .header .col-1-2:first-child {
+  padding-left: 0;
+}
+
+/* line 153, base2.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: sommet-slab-1, sommet-slab-2, Georgia, serif;
+  font-weight: normal;
+  line-height: 1.2;
+  padding: 0.5em 0 0.25em;
+}
+
+/* line 160, base2.scss */
+h1 {
+  font-size: 3em;
+}
+
+/* line 164, base2.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 168, base2.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 172, base2.scss */
+h4 {
+  font-size: 1.25em;
+}
+
+/* line 176, base2.scss */
+h5, h6 {
+  font-size: 1em;
+}
+
+/* line 180, base2.scss */
+a {
+  color: #11bad3;
+  text-decoration: none;
+}
+/* line 184, base2.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 189, base2.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 193, base2.scss */
+hr {
+  border: none;
+  background: url(../images/bg_hr.png) center center no-repeat;
+  height: 10px;
+}
+
+/* line 200, base2.scss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 219, base2.scss */
+.footer p {
+  color: #CCC;
+  /*text-align: center;*/
+  max-width: none;
+}
+
+/* line 226, base2.scss */
+.gallery {
+  position: relative;
+}
+
+/* line 230, base2.scss */
+.ie7 .rslides li a span {
+  top: auto;
+}
+
+/* line 233, base2.scss */
+.ie8 img {
+  max-width: auto;
+}

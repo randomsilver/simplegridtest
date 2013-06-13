@@ -1,48 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 
-html {
-  background: #222;
-}
-/*
-body {
-  _width: 70%;
-  color: #888;
-  font: 14px/20px Helvetica, Arial, sans-serif;
-  margin: 20px auto 0;
-  max-width: 800px;
-  text-align: center;
-  text-shadow: 0 -2px 1px #000;
-  -webkit-font-smoothing: antialiased;
-  }
-
-h1 {
-  font: 40px/60px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #fff;
-  font-weight: 200;
-  }
-
-h2 {
-  font: 16px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-bottom: 40px;
-  }
-
-#wrapper {
-  padding: 20px;
-  }
-
-p,h3,h4,pre {
-  text-align: left;
-  max-width: 540px;
-  margin: 0 auto 20px;
-  }
-
-.rslides {
-  margin: 0 auto 40px;
-  }
-*/
 #slider2,
 #slider3 {
   box-shadow: none;
@@ -117,6 +73,9 @@ a {
 
 #slider3-pager img {
   float: left;
+}
+.ie8 #slider3-pager img, .no-js .nojs_version img {
+  width: auto;
 }
 
 #slider3-pager .rslides_here a {
