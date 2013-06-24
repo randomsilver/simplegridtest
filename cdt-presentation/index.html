@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Discovering Chrome DevTools</title>
+
+		<meta name="description" content="Initial review of Chrome's development tools">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/cdt.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Discovering Chrome DevTools</h1>
+					<p>
+						<small>Created by Vivienne McGregor </small>
+					</p>
+					<p>
+						<small>24th June 2013</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Contents</h2>
+					<ol>
+						<li>Elements</li>
+						<li>Sources</li>
+						<li>Console</li>
+						<li>Newtork</li>
+						<li>Audit</li>
+						<li>Timeline</li>
+						<li>Profiles</li>
+					</ol>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Elements - DOM Manipulation</h2>
+						<ul>
+							<li>Change text in HTML code</li>
+							<li>Remove elements from DOM</li>
+							<li>Update styles</li>
+							<li>Ability to move elements in the DOM</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Sources - Live editing</h2>
+						<ul>
+							<li>Link from CSS declaration to stylesheet</li>
+							<li> Edit stylesheet and save changes to locally</li>
+							<li>Review changes via 'Local modifications' tab</li>
+							<li>Remove entire revision history using 'apply original content</li>
+							<li>'Pretty Print'</li>
+						</ul>
+
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Console</h2>
+						<ul>
+							<li>Printing to the console</li>
+							<li>Examine exceptions</li>
+							<li>Element selection shortcuts using $()
+								<ul>
+									<li>Need to explictly select first in the returned array</li>
+								</ul>
+							</li>
+							<li>Debugging
+								<ul>
+									<li>Can debug and fix errors in the Sources panel</li>
+									<li>Pause on an exception</li>
+									<li>Update data in local storage</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Network</h2>
+						<ul>
+							<li>View all network requests at once</li>
+							<li>Remove unneeded requests</li>
+							<li>Serving correctly sized images</li>
+							<li>PageSpeed Insight page analzyer</li>
+						</ul>
+					</section>
+
+				</section>	
+
+
+				<section>
+					<section>
+						<h2>Audits</h2>
+						<li>Analysis on page load</li>
+						<li>Provides suggestions for optimization</li>
+
+					</section>
+
+				</section>	
+
+				<section>
+					<section>
+						<h2>Timeline - Frame view</h2>
+						<ul>
+							<li>HTML loading</li>
+							<li>JavaScript execution</li>
+							<li>CSS</li>
+							<li>Painting to the screen</li>
+						</ul>
+					</section>
+					<section>
+						<img src="test/assets/frames-view.png" alt="Frames View" />
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Profiles</h2>
+						<ul>
+							<li>Timeline</li>
+							<li>CPU Profiler
+								<ul>
+									<li>Shows where execution time spent in JavaScript function</li>
+								</ul>
+							</li>
+							<li>CSS Selector Profile</li>
+							<li>Heap Snapshot profiling
+								<ul>
+									<li>Pinpointing memory leaks</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Chrome DevTools: Advantages over Firebug</h2>
+						<ul>
+							<li>Chrome DevTools are native to the browser</li>
+							<li>Built-in CPU Profiler and Heap Snapshot profiler</li>
+							<li>Built-in Audit tool</li>
+							<li>Can access/edit LocalStorage, SessionStorage, Cookies, SqlLite DB's etc. from Resources panel</li>
+							<li>Built-in JSON and XML viewers</li>
+							<li>Built-in JavaScript Syntax highlighting</li>
+							<li>JavaScript debugger has more features (WebWorker/XHR/DOM/Event breakpoints</li>
+							<li>JavaScript debugger shows an element's listeners and JavaScript file/line location</li>
+
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>References</h2>
+						<ul>
+							<li>https://developers.google.com/chrome-developer-tools/</li>
+							<li>http://discover-devtools.codeschool.com</li>
+						</ul>
+					</section>
+
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

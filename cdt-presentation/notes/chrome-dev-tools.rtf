@@ -1,0 +1,342 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red217\green11\blue0;\red74\green0\blue230;\red0\green68\blue254;
+\red168\green24\blue75;\red46\green111\blue253;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14540\viewh9060\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs36 \cf0 Discovering Chrome DevTools\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b0\fs24 \cf0 \
+\
+I recently switched my default browser from Firefox to Chrome and so this presentation is a an overview of Chrome DevTools and what I discovered.\
+\
+I'll use this page that I created earlier to help illustrate some of the features I found interesting. \
+\
+Once opened up, CDT reveals 8 tabs:
+\b \cf2  Slide 1
+\b0 \cf0 \
+\
+Elements\
+Sources\
+Console\
+Network\
+Audit\
+Timeline\
+Profiles\
+\pard\pardeftab720
+\cf0 \
+\pard\tx566\pardeftab720\sl360
+
+\f1\b\fs28 \cf0 Elements - DOM manipulation 
+\f0\fs24 \cf2 Slide 2
+\f1\b0\fs28 \cf0 \
+\
+* Change text in HTML code\
+* Remove elements from DOM\
+* Update styles - \cf3 demo\cf0 \
+* Ability to move elements in the DOM - \cf3 demo\cf0 \
+\
+\
+\pard\tx566\pardeftab720\sl360
+
+\i \cf0 \ul \ulc0 Notes\
+\
+
+\i0 \ulnone So let's stat with the Elements panel..\
+\
+Like the HTML tab in Firebug, the Elements tab in CDT allows me to do standard DOM manipulation e.g. change the text in the HTML code, remove elements from the DOM and update styles all with out a browser refresh.\
+\
+But I can also move elements and blocks of code around and again see results live in the browser without a page refresh. \
+\cf3 [demo moving list items around in navigation]\cf0 \
+\
+Another interesting feature  is that you can change styles for a particular element state and view the results with no page refresh,  e.g. changing the colour/functionality of a hover state on an <a> tag for instance\
+\cf3 [demo ability to change element states e.g. hover states in the browser with no refresh (inspect <a> tag, click on  [ ] to show different states, select hover, and change style of that state. Uncheck hover box and hover over <a> tag to see changes)]\cf0 \
+\
+\pard\tx566\pardeftab720\sl360\qc
+\cf0 -- 0 --\
+\pard\tx566\pardeftab720\sl360
+\cf0 \
+\pard\tx566\pardeftab720\sl360
+
+\b \cf0 Sources - Live editing 
+\f0\fs24 \cf2 Slide 3
+\f1\b0\fs28 \cf0 \
+\
+* Link from CSS declaration to stylesheet\
+* Edit stylesheet and save changes to locally\
+* Review changes via 'Local modifications' tab\
+* Remove entire revision history using 'apply original content'\
+* 'Pretty Print*\
+\
+\
+\pard\tx566\pardeftab720\sl360
+
+\i \cf0 \ul Notes\
+\pard\tx566\pardeftab720\sl360
+
+\i0\b \cf0 \ulnone \
+\pard\tx566\pardeftab720\sl360
+
+\b0 \cf0 From the Elements panel, I can select an element in the HTML, find it's CSS declaration in the right hand panel and from there find it's corresponding location in the stylesheet. \
+\
+Once you're in the stylesheet, I can then edit styles, view the results in the browser and then save those changes locally (cmd+s), right-click and select 'Local modifications'. Here I can toggle between my new styles and original styles I can undo the changes by clicking on the  'apply original content' link. \cf3 [demo]\cf0 \
+\
+Alternatlvely I can revert to the original version of the and removing the entire revision history by clicking on the 'revert' link. \cf3 [demo]\cf0 \
+\
+This panel has a 'Pretty Print' option for reading minified JavaScript . So if I select the link to the jQuery file, I can see that it's minified\'85then if I click the \{\} ('Pretty Print') icon at bottom left, the JavaScript is transformed into something more readable.\
+\cf3 [demo - clicking on jQuery file and selecting 'Pretty Print' icon to toggle unminify/minify]\
+\
+\pard\tx566\pardeftab720\sl360\qc
+\cf0 -- 0 --\
+\pard\tx566\pardeftab720\sl360
+\cf0 \
+\pard\tx566\pardeftab720\sl360
+
+\b \cf0 Console
+\b0   
+\b  
+\f0\fs24 \cf2 Slide 4
+\f1\b0\fs28 \cf0 \
+\
+* Printing to the console\
+* Examine exceptions\
+* Element selection shortcuts using $()\
+* Debugging\
+\
+\pard\tx566\pardeftab720\sl360
+
+\i \cf0 \ul Notes\
+
+\i0 \ulnone \
+.. and so onto the Console panel.. used extensively for debugging JavaScript. You can print to the console, examine exceptions and analyse where functionality is broken. \
+\
+I can also use the Console's $() shortcut  to find DOM elements and then use the 'inspect' command to view the elements in the Elements panel \
+\
+Because the '$' character appears in other JS libraries e.g. jQuery, it can override the console '$'. In this case an array of DOM nodes is returned instead of the element itself. To prevent this, you have to explicitly select the first on in the array. \
+\cf3 [demo - \
+1)  $('#slider3-pager') --> returns an array\
+2) Tab up and type in $(' #slider3-pager')[0]\
+3) inspect($(' #slider3-pager')[0])\
+]\cf0 \
+\
+Additionally, you can\
+\
+* Can debug and fix errors in the Sources panel\
+* Pause on an exception\
+* Update data in local storage\
+\
+\pard\tx566\pardeftab720\sl360\qc
+\cf0 -- 0 --\
+\pard\tx566\pardeftab720\sl360\qc
+\cf0 \
+\pard\tx566\pardeftab720\sl360
+\cf0 \
+\pard\tx566\pardeftab720\sl360
+
+\b \cf0 Network  
+\f0\fs24 \cf2 Slide 5
+\f1\fs28 \cf0 \
+\
+* 
+\b0 View all network requests at once \
+* Network performance using PageSpeed Insight\
+* Remove unneeded requests\
+* Serving correctly sized images\
+* PageSpeed Insight page analzyer\
+
+\b \
+\pard\tx566\pardeftab720\sl360
+
+\i\b0 \cf0 \ul Notes\
+
+\i0 \ulnone \
+T\
+In the Network panel I can see all the network requests at once, in one panel with the ability to preview the contents of the file by clicking the link to the file under 'Name' and then selecting the 'Preview' tab. \
+\cf3 [demo]\cf0 \
+\
+In addition, there's the  Google extension PageSpeed extension for Chrome which analyses the performance of a web page and provides suggestions to improve the performance.\cf3  \cf0 \
+\cf3 [demo]\cf0 \
+\
+\pard\tx566\pardeftab720\sl360\qc
+\cf0 -- 0 --\
+\pard\tx566\pardeftab720\sl360
+\cf0 \
+\pard\tx566\pardeftab720\sl360
+
+\b \cf0 Audits  
+\f0\fs24 \cf2 Slide 6
+\f1\fs28 \cf0 \
+\
+\pard\tx566\pardeftab720\sl360
+
+\b0 \cf0 * Analysis on page load\
+* Provides suggestions for optimisation\
+* PageSpeed \
+\
+
+\i \ul Notes\
+\
+
+\i0 \ulnone The Audits panel seems to be to a similar function to the PageSpeed Analyser. If I run it, I'll get suggestions/optimisations to improve page performance.\
+\
+\pard\tx566\pardeftab720\sl360\qc
+\cf0 -- 0 --\
+\pard\tx566\pardeftab720\sl360
+\cf0 \
+\pard\tx566\pardeftab720\sl360
+
+\b \cf0 Timeline -  Frame view  
+\f0\fs24 \cf2 Slide 7
+\f1\fs28 \cf0 \
+\pard\tx566\pardeftab720\sl360
+
+\b0 \cf0 \
+o HTML loading\
+o Javascript execution\
+o CSS\
+o Painting to the screen
+\i \ul \
+\
+\
+Notes
+\i0 \ulnone \
+As computer slows down, so does the frame rate. Various factors can can slow down the frame rate. Optimum page performance should be between 30fps and 60fps. \
+
+\i \ul \
+
+\i0 \ulnone By monitoring the frame view you can see whether any events e.g. HTML loading, JavaScript execution, CSS or painting to the screen are affecting the frame rate. \
+\
+[add an event to a link and see if it affects frame rate, record frame time line.. above 60fps is good. Anything around the 30fps is not so good and it's probably where you'd start to see laggy animation/low frame rate.\
+\pard\tx566\pardeftab720\sl360
+\cf4 [demo - show frame view]\cf0 \
+\
+\
+\pard\tx566\pardeftab720\sl360
+\cf5 (For some reason recently, this panel has stopped working.. fortunately, when it was working, I took a screenshot ;))\cf0 \
+\pard\tx566\pardeftab720\sl360
+\cf4 [demo - show screenshot]\cf0 \
+\
+\pard\tx566\pardeftab720\sl360\qc
+\cf0 -- 0 --\
+\pard\tx566\pardeftab720\sl360
+\cf0 \
+\pard\tx566\pardeftab720\sl360
+
+\b \cf0 Profiles  
+\f0\fs24 \cf2 Slide 8
+\f1\b0\fs28 \cf0 \
+
+\b \
+\pard\tx566\pardeftab720\sl360
+
+\b0 \cf0 * CPU Profiler\
+* CPU Profiler \
+* Heap Snapshot profile\
+\
+
+\i \ul Notes
+\i0 \ulnone \
+
+\i \ul \
+
+\i0 \ulnone The Profiles panel allows us to profile the execution time and memory usage of a web app/page.\
+\
+CPU Profiler - shows where execution time is spent in the page's JavaScript functions.
+\i \ul \
+
+\i0 \ulnone To start testing where the execution time is being spent in the page's JavaScript, start by hitting the 'Start' button - this creates a profile, then carry out an action(s), then hit the 'Stop' button.\
+\pard\tx566\pardeftab720\sl360
+\cf4 [demo]\cf0 \
+\
+You can then open up the profile and search for any slow functions, click on the link to the function on the right hand side to the function destination. You can then alter/fix the function and repeat the profile.\
+\
+CSS Selector Profile - records the aggregate time spent matching selectors to elements in the DOM tree.\
+\
+\pard\tx566\pardeftab720\sl360
+
+\fs26 \cf0 The heap profiler gives an overview of all the objects in memory at the time a snapshot is taken. So you can  find out what in the page or app is using memory and go on to make improvements to its performance.\
+\
+\pard\tx566\pardeftab720\sl360
+
+\b \cf0 Pinpointing memory leaks\
+\
+* 
+\b0 Heap\
+Definition:  
+\f0\i Memory requests are satisfied by allocating portions from a large pool of memory called the heap. At any given time, some parts of the heap are in use, while some are "free" (unused) and thus available for future allocations.\
+\pard\tx566\pardeftab720\sl360
+{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Memory_management"}}{\fldrslt 
+\i0 \cf0 https://en.wikipedia.org/wiki/Memory_management}}
+\f1\i0\fs28 \
+\
+Anaylsis of a suspected memory leak starts by taking an initial heap snapshot, carry out the functions that might be causing the memory leak, take another heap snapshot and the compare the last 2 snapshots. Common causes of memory leaks are detached DOM nodes. \
+\pard\tx566\pardeftab720\sl360
+\cf6 [demo - Heap Snapshot profiling]\cf0 \
+\
+\pard\tx566\pardeftab720\sl360\qc
+\cf0 -- 0 --\
+\pard\tx566\pardeftab720\sl360
+\cf0 \
+\pard\tx566\pardeftab720\sl360
+
+\b \cf0 Chrome DevTools Advantages  
+\f0\fs24 \cf2 Slide 9
+\f1\b0\fs28 \cf0 \
+\
+* Chrome DevTools are native to the browser (unlike Firebug, which is a plugin)\
+* Built-in CPU Profiler and Heap Snapshot profiler\
+* Built-in Audit tool\
+* Can access and edit LocalStorage, SessionStorage, Cookies, SqlLite DB's etc. in Resources panel\
+* JSON and XML viewers are build in so you don't need a plugin to inspect responses\
+*  Built-in JavaScript Syntax highlighting \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls1\ilvl0\cf0 *  JavaScript debugger has more features (WebWorker/XHR/DOM/Event breakpoints)\
+* JavaScript debugger shows an element's listeners and JavaScript file/line location.\
+\pard\tx566\pardeftab720\sl360
+\cf0 \
+\pard\tx566\pardeftab720\sl360
+
+\b \cf0 References 
+\b0 \
+\
+\pard\tx566\pardeftab720\sl360
+{\field{\*\fldinst{HYPERLINK "https://developers.google.com/chrome-developer-tools/"}}{\fldrslt \cf0 \ul https://developers.google.com/chrome-developer-tools/}}\
+\pard\tx566\pardeftab720\sl360
+{\field{\*\fldinst{HYPERLINK "http://discover-devtools.codeschool.com/"}}{\fldrslt \cf0 http://discover-devtools.codeschool.com}}\
+\
+\
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls2\ilvl0\cf0 {\listtext	\'95	}Built in Profiler and Heap analyzer\
+{\listtext	\'95	}Built in Audit tool\
+{\listtext	\'95	}Can access and edit LocalStorage, SessionStorage, Cookies, SqlLite DB's etc...\
+{\listtext	\'95	}WebSockets network sniffing\
+{\listtext	\'95	}SHIFT+ESC to get a detailed task manager of all Chrome processes and FPS of each page\
+{\listtext	\'95	}JSON and XML viewers are build in so you don't need a plugin to inspect responses\
+{\listtext	\'95	}JS Syntax highlighting is built right in, no need for a plugin\
+{\listtext	\'95	}JS debugger has many more features (WebWorker/XHR/DOM/Event breakpoints)\
+{\listtext	\'95	}JS debugger shows an element's listeners and js file/line they came from (awesome!)\
+{\listtext	\'95	}Debugger does not crash and does not creep (like FBug)\
+{\listtext	\'95	}Script panel does not go haywire (ever see code for 3 JS files overlaid by bug in FB)\
+{\listtext	\'95	}Each window gets a Dev window if you like; Firebug is a singleton\
+{\listtext	\'95	}FBug perturbs the page because it is a plugin, Chrome is native so this is negligible\
+\pard\tx566\pardeftab720\sl360
+\cf0 \
+[May omit the above list!]\
+\
+\
+\
+\
+\pard\tx566\pardeftab720\sl360
+
+\b \cf0 Imagery
+\b0  \
+\pard\tx566\pardeftab720\sl360
+
+\f0\fs24 \cf0 Google search - 1950's chrome car fender close-up\
+}
