@@ -1,7 +1,12 @@
+/* line 1, 720_grid.scss */
 .grid {
-	.header {
-		.nav {
-			text-align: center;
-		}
-	}
+  width: auto;
+}
+/* line 2, 720_grid.scss */
+.grid .header {
+  width: auto;
+}
+/* line 4, 720_grid.scss */
+.grid .header .nav {
+  text-align: center;
 }
